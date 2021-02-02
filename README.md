@@ -4,34 +4,6 @@ Docker build for managing an ARK: Survival Evolved server.
 
 This image uses [Ark Server Tools](https://github.com/arkmanager/ark-server-tools) to manage an ark server.
 
-*If you use an old volume, get the new arkmanager.cfg in the template directory.*  
-__Don't forget to use `docker pull bigdaddymccarron/ark` to get the latest version of the image__
-
-## v2.8
-- Modified run.sh to build the steamenv.sh for cron to use
-- Modified crontab file to run the steamenv.sh before running the arkmanager commands
-
-## v2.7
-- Modifed run.sh to check for new arkmanager tools on startup
-- Changed /etc/arkmanager/arkmanager.cfg to set arkstChannel to "master" instead of using the BRANCH environment variable
-
-## v2.6
-- Added arkmanager Branch settings to docker config and added BRANCH environment variable
-
-## v2.5
-- Fixed updatemods in arkshortcut.sh
-
-## v2.4
-- Added arkshortcut.sh and its corresponding shortcuts
-
-## v2.3
-- Fixed run.sh
-- Fixed user.sh
-
-## v2.2
-- Updated to use the new arkmanager tools
-- Updated base OS to ubunto 20.04 LTS
-
 ## Features
  - Easy install (no steamcmd / lib32... to install)
  - Use Ark Server Tools : update/install/start/backup/rcon/mods
