@@ -1,0 +1,35 @@
+version: '3'
+services:
+  ark:
+    container_name: ark-server
+    image: ghcr.io/hoellenwesen/docker-ark-dedicated-server:latest
+    restart: unless-stopped
+    environment:
+      - BRANCH=master
+      - SESSIONNAME=Ark Docker
+      - SERVERMAP=TheIsland
+      - SERVERPASSWORD="" 
+      - ADMINPASSWORD=adminpassword
+      - BACKUPONSTART=1
+      - UPDATEONSTART=1
+      - NBPLAYERS=10
+      - TZ=Europe/Berlin
+      - GID=281
+      - UID=1007
+    volumes:
+      - /mnt/user/Dockers/Ark/server:/ark
+      - steam:/home/steam
+    ports:
+      - 7777:7777/udp
+      - 7777:7777
+      - 27015:27015/udp
+      - 27015:27015
+      - 32330:32330
+    networks:
+      - ark-network
+
+networks:
+  ark-network:
+
+volumes:
+  steam:
