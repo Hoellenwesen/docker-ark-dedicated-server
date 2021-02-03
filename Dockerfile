@@ -46,7 +46,7 @@ ENV GID 281
 # Install dependencies 
 COPY sources.list /etc/apt/sources.list
 RUN apt-get update && apt-get upgrade -y && \ 
-    apt-get install -y curl lib32gcc1 lsof git vim sudo cron apt-utils locales perl-modules libc6-i386
+    apt-get install -y curl lib32gcc1 lsof git vim sudo cron apt-utils locales perl-modules libc6-i386 net-tools
 RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y tzdata
 
 # Enable passwordless sudo for users under the "sudo" group
@@ -132,8 +132,8 @@ EXPOSE ${QUERYPORT} ${SERVERPORT} 7777
 EXPOSE ${QUERYPORT}/udp ${SERVERPORT}/udp 7777/udp
 EXPOSE ${RCONPORT}/tcp
 
-VOLUME  /ark 
-VOLUME  /home/steam 
+VOLUME /ark 
+VOLUME /home/steam 
 
 # Change the working directory to /ark
 WORKDIR /ark
