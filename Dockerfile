@@ -132,8 +132,8 @@ EXPOSE ${QUERYPORT} ${SERVERPORT} 7777
 EXPOSE ${QUERYPORT}/udp ${SERVERPORT}/udp 7777/udp
 EXPOSE ${RCONPORT}/tcp
 
-VOLUME /ark 
-VOLUME /home/steam 
+VOLUME /ark
+VOLUME /home/steam
 
 # Change the working directory to /ark
 WORKDIR /ark
