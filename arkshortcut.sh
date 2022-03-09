@@ -16,7 +16,7 @@ case "$cmd" in
 		arkmanager start
 		;;
 	"stop")
-		arkmanager stop
+		arkmanager stop --saveworld
 		;;
 	"status")
 		arkmanager status
