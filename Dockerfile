@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM ubuntu:latest
 
 # Base setuo was taken from
 #https://github.com/TuRz4m/Ark-docker
