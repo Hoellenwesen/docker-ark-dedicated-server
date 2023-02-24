@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:rolling
 
 # Base setuo was taken from
 #https://github.com/TuRz4m/Ark-docker
